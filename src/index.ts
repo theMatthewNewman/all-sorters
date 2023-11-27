@@ -1,4 +1,4 @@
-function bubbleSort(arr:Number[]) {
+export function bubbleSort(arr:Number[]) {
     for (let i = 0; i < arr.length; i++) { 
         for (let j = 0; j < (arr.length - i - 1); j++) { 
             if (arr[j] > arr[j + 1]) { 
@@ -11,7 +11,7 @@ function bubbleSort(arr:Number[]) {
     return(arr); 
 }
 
-function selectionSort(arr:Number[])
+export function selectionSort(arr:Number[])
 {
     for (let i = 0; i < arr.length; i++)
     {
@@ -26,6 +26,3 @@ function selectionSort(arr:Number[])
     }
     return(arr);
 }
-
-exports.bubbleSort = bubbleSort;
-exports.selectionSort = selectionSort;

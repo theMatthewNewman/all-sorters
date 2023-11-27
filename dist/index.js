@@ -23,6 +23,7 @@ function selectionSort(arr) {
     }
     return (arr);
 }
+
 exports.bubbleSort = bubbleSort;
 exports.selectionSort = selectionSort;
 //# sourceMappingURL=index.js.map
