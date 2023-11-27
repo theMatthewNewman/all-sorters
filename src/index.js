@@ -20,7 +20,6 @@ function selectionSort(arr)
         if (arr[j] < arr[min_idx]) {
             min_idx = j;
         }
-        swap(arr,min_idx, i);
         let temp = arr[min_idx];
         arr[min_idx] = arr[i];
         arr[i] = temp;
