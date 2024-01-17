@@ -1,6 +1,6 @@
 {
   "name": "all-sorters",
-  "version": "1.1.6",
+  "version": "1.1.5",
   "description": "A Collection of various javascript sorting algorithms (some good and some terrible).",
   "main": "dist/index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "prepare": "npm run build",
     "prepublishOnly": "npm test",
     "publishMinor": "npm version minor && npm publish",
-    "publish": "npm version patch && npm publish",
+    "publish": "npm version patch --no-git-tag-version && npm publish",
     "publishMajor": "npm version major && npm publish"
   },
   "repository": {
