@@ -1,6 +1,6 @@
 {
   "name": "all-sorters",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "A Collection of various javascript sorting algorithms (some good and some terrible).",
   "main": "dist/index.js",
   "scripts": {
