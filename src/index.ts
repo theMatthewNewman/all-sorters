@@ -12,6 +12,20 @@ export function bubbleSort(arr:number[]) {
     return(sorted); 
 }
 
+export function insertionSort(arr:number[]) {
+    const sorted = [...arr]
+    for (let i = 1; i < sorted.length; i++) {
+        let j = i;
+        while (j>0 && sorted[j-1] > sorted[j]) {
+            let temp = sorted[j];
+            sorted[j] = sorted[j-1];
+            sorted[j-1] = temp;
+            j--;
+        }
+    }
+    return(sorted);
+}
+
 export function selectionSort(arr:number[]) {
     let sorted = [...arr]
     for (let i = 0; i < sorted.length; i++) {
@@ -63,5 +77,19 @@ export async function sleepSort(arr:number[]) {
         }))
     }
     await Promise.all(promises)
+    return(sorted);
+}
+
+type stringSortArgs = "i" | "default"
+
+export function stringSort(arr:string[], args:stringSortArgs="default") {
+    const sorted = [...arr];
+    switch (args) {
+        case "i" :
+            sorted.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
+            break;
+        default:
+            sorted.sort()
+    }
     return(sorted);
 }

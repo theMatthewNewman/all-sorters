@@ -9,8 +9,8 @@
     "dev": "concurrently \"tsc --watch\" \"nodemon ./dist/index.js\"",
     "prepare": "npm run build",
     "prepublishOnly": "npm test",
-    "publishMinor": "push; npm version minor; npm publish",
     "publish": "push; npm version patch --no-git-tag-version; npm publish",
+    "publishMinor": "push; npm version minor; npm publish",
     "publishMajor": "push; npm version major; npm publish"
   },
   "repository": {

@@ -1,4 +1,4 @@
-import { selectionSort, bubbleSort, stalinSort, sleepSort } from "../src";
+import { selectionSort, bubbleSort, stalinSort, sleepSort, insertionSort } from "../src";
 
 const unMutatedArray = [ 5, 3, 4, 8, 6, 9, 10, 1, 3, 2, 9, 8, 7, 5 ]
 
@@ -27,5 +27,10 @@ test('basic test of stalinSort', () => {
 
 test('basic test of sleepSort', async() => {
     expect(await sleepSort(unsortedArray)).toStrictEqual(sortedArray);
+    expect(unsortedArray).toStrictEqual(unMutatedArray);
+});
+
+test('basic test of insertionSort', () => {
+    expect(insertionSort(unsortedArray)).toStrictEqual(sortedArray);
     expect(unsortedArray).toStrictEqual(unMutatedArray);
 });
