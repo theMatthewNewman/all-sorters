@@ -8,7 +8,10 @@
     "build": "rollup -c",
     "dev": "concurrently \"tsc --watch\" \"nodemon ./dist/index.js\"",
     "prepare": "npm run build",
-    "prepublishOnly": "npm test"
+    "prepublishOnly": "npm test",
+    "publishMinor": "npm version minor && npm publish",
+    "publish": "npm version patch && npm publish",
+    "publishMajor": "npm version major && npm publish"
   },
   "repository": {
     "type": "git",
